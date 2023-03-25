@@ -6,15 +6,15 @@ import Navbar from "../Navbar/Navbar";
 import ProductsCart from "../ProductsCart/ProductsCart";
 
 const Cart = () => {
-    const mydata = useSelector((state)=>state.AddIntoCart);
-    return(
-        <>
-        <Navbar></Navbar>
-        {mydata.length === 0 && <EmptyCart></EmptyCart>}
-        {mydata.length > 0 && <ProductsCart></ProductsCart> }
-        <Footer></Footer>
-        </>
-    );
-}
+  const mydata = useSelector((state) => state.AddIntoCart);
+  return (
+    <>
+      <Navbar></Navbar>
+      {mydata.length === 0 && <EmptyCart></EmptyCart>}
+      {mydata.length > 0 && <ProductsCart></ProductsCart>}
+      <Footer></Footer>
+    </>
+  );
+};
 
 export default Cart;

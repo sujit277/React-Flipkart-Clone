@@ -5,7 +5,7 @@ import Home from './Components/Home/Home';
 import Login from './Components/Login/Login';
 import Signup from './Components/Signup/Signup';
 import Cart from './Components/Cart/Cart';
-import EachProduct from './Components/EachProduct/EachProduct';
+import ProductDetails from './Components/ProductDetails/ProductDetails';
 import OrderPlaced from './Components/OrderPlaced/OrderPlaced';
 
 function App() {
@@ -18,7 +18,7 @@ function App() {
           <Route path="/login" element={<Login/>}></Route>
           <Route path="/signup" element={<Signup/>}></Route>
           <Route path="/cart" element={<Cart/>}></Route>
-          <Route path="/product/:id" element={<EachProduct/>}></Route>
+          <Route path="/product/:id" element={<ProductDetails/>}></Route>
           <Route path="/success" element={<OrderPlaced/>} ></Route>
         </Routes>
       </BrowserRouter>
