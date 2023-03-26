@@ -19,7 +19,6 @@ const ProductsList = () => {
   async function getallProducts() {
     const result = await axios.get("http://localhost:3000/Products");
     setData(result.data);
-    console.log(result.data);
   }
 
   function oneCategory(arr) {
@@ -36,9 +35,6 @@ const ProductsList = () => {
   function handleInput(event) {
     const name = event.target.name;
     const value = event.target.value;
-    console.log(value);
-    console.log(name);
-    console.log(filterData);
     setFilterData({ ...filterData, [name]: value });
   }
 

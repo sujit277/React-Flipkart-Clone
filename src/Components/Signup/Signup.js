@@ -17,16 +17,11 @@ const Signup = () => {
   function handleInput(event) {
     const name = event.target.name;
     const value = event.target.value;
-    console.log(value);
-    console.log(name);
-    console.log(Data);
     setData({ ...Data, [name]: value });
   }
 
   function register() {
-    console.log(Data);
     axios.post("http://localhost:3000/Users", Data).then((res) => {
-      console.log(res.data);
       alert("User Registered Successfully");
       window.location.reload();
     });

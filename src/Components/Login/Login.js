@@ -19,16 +19,12 @@ const Login = () => {
   function handleInput(event) {
     const name = event.target.name;
     const value = event.target.value;
-    console.log(value);
-    console.log(name);
-    console.log(Data);
     setData({ ...Data, [name]: value });
   }
 
   async function getLoginData() {
     const result = await axios.get("http://localhost:3000/Users");
     setLoginData(result.data);
-    console.log(result.data);
   }
 
   function checkLogin() {
